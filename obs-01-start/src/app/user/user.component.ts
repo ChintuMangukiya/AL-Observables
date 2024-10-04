@@ -6,6 +6,7 @@ import { ActivatedRoute, Params } from '@angular/router';
   templateUrl: './user.component.html',
   styleUrls: ['./user.component.css']
 })
+
 export class UserComponent implements OnInit {
   id: number;
 
@@ -16,5 +17,7 @@ export class UserComponent implements OnInit {
     this.route.params.subscribe((params: Params) => {
       this.id = +params.id;
     });
+
+    // this.id = this.route.snapshot.params.id
   }
 }
